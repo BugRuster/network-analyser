@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="max-w-4xl mx-auto">
+        {% include "components/scan_form.html" %}
+        
+        <!-- Progress Section -->
+        <div id="progress-section" class="hidden bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Scan Progress</h2>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full scan-progress" style="width: 0%"></div>
+            </div>
+            <p id="status-message" class="text-gray-600"></p>
+        </div>
+        
+        <!-- Results Section -->
+        {% include "components/results.html" %}
+    </div>
+{% endblock %}

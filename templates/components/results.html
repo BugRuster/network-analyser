@@ -1,0 +1,46 @@
+<div id="results-section" class="hidden">
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Scan Results</h2>
+        
+        <!-- Security Score -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">Overall Security Score</h3>
+            <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                    <div>
+                        <span id="security-score" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-blue-600">
+                            Score: 0/100
+                        </span>
+                    </div>
+                </div>
+                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                    <div id="security-score-bar" style="width:0%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vulnerability Summary -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">Vulnerability Summary</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2">Severity Distribution</h4>
+                    <div id="severity-distribution" class="space-y-2">
+                        <!-- Severity counts will be inserted here -->
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2">Category Distribution</h4>
+                    <div id="category-distribution" class="space-y-2">
+                        <!-- Category counts will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Results -->
+        <div id="results-content" class="space-y-6">
+            <!-- Results will be dynamically inserted here -->
+        </div>
+    </div>
+</div>

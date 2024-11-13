@@ -1,0 +1,51 @@
+<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+    <h2 class="text-xl font-semibold mb-4">Scan Configuration</h2>
+    
+    <div class="space-y-4">
+        <!-- Target Input -->
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="target">
+                Target Host/Network:
+            </label>
+            <input type="text" id="target" 
+                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   placeholder="Enter IP or hostname (e.g., 192.168.1.1 or example.com)">
+        </div>
+        
+        <!-- Port Range -->
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="ports">
+                Port Range:
+            </label>
+            <input type="text" id="ports" 
+                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   value="1-1024"
+                   placeholder="e.g., 80,443 or 1-1024">
+        </div>
+        
+        <!-- Scan Options -->
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2">
+                Scan Options:
+            </label>
+            <div class="flex flex-wrap gap-4">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="service_scan" class="form-checkbox h-4 w-4 text-blue-600" checked>
+                    <span class="ml-2">Service Version Detection</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="vuln_scan" class="form-checkbox h-4 w-4 text-blue-600" checked>
+                    <span class="ml-2">Vulnerability Detection</span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Start Button -->
+        <div class="flex justify-end">
+            <button id="startScan" 
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                Start Scan
+            </button>
+        </div>
+    </div>
+</div>

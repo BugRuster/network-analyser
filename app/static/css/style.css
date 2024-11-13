@@ -1,0 +1,212 @@
+/* Progress bar animations */
+.scan-progress {
+    transition: width 0.5s ease-in-out;
+}
+
+/* Severity badges */
+.severity-badge {
+    transition: all 0.3s ease;
+}
+
+.severity-badge:hover {
+    transform: translateY(-1px);
+}
+
+/* Result cards */
+.result-card {
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.ports-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ports-table th,
+.ports-table td {
+    border: 1px solid #e5e7eb;
+}
+
+.ports-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}
+
+/* Vulnerability section */
+.vulnerability-item {
+    transition: all 0.3s ease;
+}
+
+.vulnerability-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Service version badges */
+.version-badge {
+    font-family: monospace;
+    background-color: #f3f4f6;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+/* Animation for alerts */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.alert {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-indicator.open {
+    background-color: #10B981;
+}
+
+.status-indicator.filtered {
+    background-color: #F59E0B;
+}
+
+.status-indicator.closed {
+    background-color: #EF4444;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #1F2937;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* CVE reference links */
+.cve-reference {
+    color: #2563EB;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.cve-reference:hover {
+    color: #1D4ED8;
+    text-decoration: underline;
+}
+
+/* Security score gauge */
+.score-gauge {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    margin: auto;
+}
+
+.score-gauge-circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 1s ease;
+}
+
+/* Recommendations section */
+.recommendation-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #3B82F6;
+    background-color: #F3F4F6;
+    transition: all 0.3s ease;
+}
+
+.recommendation-item:hover {
+    background-color: #F9FAFB;
+    transform: translateX(4px);
+}
+
+/* Port status colors */
+.port-open {
+    color: #059669;
+}
+
+.port-filtered {
+    color: #D97706;
+}
+
+.port-closed {
+    color: #DC2626;
+}
+
+/* Service version formatting */
+.service-version {
+    font-family: 'Courier New', Courier, monospace;
+    background: #F3F4F6;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-size: 0.9em;
+}
+
+/* Vulnerability severity indicators */
+.severity-indicator {
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    .results-section {
+        break-inside: avoid;
+    }
+    
+    .page-break {
+        page-break-before: always;
+    }
+}
